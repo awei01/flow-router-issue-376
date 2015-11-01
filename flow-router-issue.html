@@ -1,0 +1,39 @@
+<head>
+  <title>flow-router-issue</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+
+	<p>Open up your console and watch.</p>
+	<p>
+		Clicking links is no problem:
+		<ul>
+			<li><a href="#!">Run home route</a></li>
+			<li><a href="#!second">Run second route</a></li>
+		</ul>
+	</p>
+	<p>
+		This works:
+		<ol>
+			<li>Click the "second" route above</li>
+			<li>Copy and paste this valid route into address bar: http://localhost:3000/#!</li>
+			<li>Press enter</li>
+			<li>No problem here</li>
+		</ol>
+	</p>
+	<p>
+		To reproduce bug:
+		<ol>
+			<li>Click the "home" route above</li>
+			<li>Copy and paste this valid route into address bar: http://localhost:3000/#!/second</li>
+			<li>Press enter</li>
+			<li>Note console output</li>
+		</ol>
+	</p>
+</template>
